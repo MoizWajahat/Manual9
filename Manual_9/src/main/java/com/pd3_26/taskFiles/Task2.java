@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pd3_26.task1.T2;
+package com.pd3_26.taskFiles;
 
 import javax.swing.JOptionPane;
 
