@@ -5,6 +5,8 @@
  */
 package com.pd3_26.task1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -75,5 +77,55 @@ public class Task1 {
         }
         
         return Num;
+    }
+    
+    static boolean FindSubString (String S, String sub) {
+        int subCount = 0;
+        int SCount = 0;
+        boolean found = true;
+        boolean attempt = false;
+        
+        while (SCount < S.length())
+        {
+            if ( S.charAt(SCount) == sub.charAt(subCount) )
+            {
+                for (int i = 0; i < sub.length(); i++)
+                {
+                    if (! (S.charAt(SCount) == sub.charAt(i)) )
+                    {
+                        found = false;
+                        attempt = true;
+                        break;
+                    }
+                    SCount++;
+                }
+            }
+            else
+            {
+                SCount++;
+            }
+        }
+        
+        if (found && !attempt)
+        {
+            found = false;
+        }
+        
+        return found;
+    }
+    
+    public static void main (String[] args) {
+        String input = new String();
+        String Sub = new String();
+        
+        input = JOptionPane.showInputDialog("Please enter the string for analysis:\n");
+        Sub = JOptionPane.showInputDialog("Also, please enter the sub-string.");
+        
+        JOptionPane.showMessageDialog(null, "Original String: " + input + "\n"
+                                          + "Number of words: " + WordCounter(input) + "\n"
+                                          + "Number of vowels: " + VowelCounter(input) + "\n"
+                                          + "Number of punctuations: " + PuncCount(input) + "\n"
+                                          + "\"" + Sub + "\"'s presence in this String: " + FindSubString(input, Sub) );
+        
     }
 }
