@@ -115,8 +115,8 @@ public class Task1 {
     }
     
     public static void main (String[] args) {
-        String input = new String();
-        String Sub = new String();
+        String input;
+        String Sub;
         
         input = JOptionPane.showInputDialog("Please enter the string for analysis:\n");
         Sub = JOptionPane.showInputDialog("Also, please enter the sub-string.");
