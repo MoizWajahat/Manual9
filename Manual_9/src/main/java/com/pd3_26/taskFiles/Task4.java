@@ -128,6 +128,12 @@ class MyString {
         return padded;
     }
     
+    /**
+     * This method will return all the vowels from the String in order.
+     * @param S An inputted String
+     * @return A String of Vowels will be displayed (if S contains vowels) 
+     */
+    
     static String TakeVowels (String S) {
         String V = "";
         
