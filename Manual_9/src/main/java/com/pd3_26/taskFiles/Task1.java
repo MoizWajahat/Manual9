@@ -20,7 +20,7 @@ public class Task1 {
         {
             if (S.charAt(i) == ' ')
             {
-                Num++; 
+                Num++; //This was changed to Num = Num + 1
 
             }
         }
