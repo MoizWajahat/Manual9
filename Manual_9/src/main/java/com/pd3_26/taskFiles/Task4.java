@@ -18,7 +18,7 @@ public class Task4 {
 class MyString {
     
     /**
-     * 
+     * This is a method that will save only the integers from a String.
      * @param S This will be an inputted String.
      * @return This will return only the integers from the String.
      */
@@ -38,7 +38,7 @@ class MyString {
     }
     
     /**
-     * 
+     * This will remove all punctuation marks from a String.
      * @param S This will be an inputted String.
      * @return This will remove all punctuation marks from the String.
      */
@@ -78,7 +78,7 @@ class MyString {
     }
     
     /**
-     * 
+     * This will remove all spaces from a String.
      * @param S This will be an inputted String.
      * @return This will remove all spaces from the String.
      */
@@ -106,7 +106,7 @@ class MyString {
     }
     
     /**
-     * 
+     * This will extend a given String to a given amount of length.
      * @param S This will be an inputted String.
      * @param size This will be the required size of the String (must be less than S.length().
      * @return This will return a String of the required size.
