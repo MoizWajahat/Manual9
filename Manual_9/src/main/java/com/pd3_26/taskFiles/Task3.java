@@ -5,6 +5,8 @@
  */
 package com.pd3_26.taskFiles;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -12,8 +14,6 @@ package com.pd3_26.taskFiles;
 public class Task3 {
 
     static String RidMultipleBlank(String S) {
-        int SpaceNum = 0;
-        int Count;
         String kid = "";
 
         for (int i = 0; i < S.length(); i++) {
@@ -33,10 +33,42 @@ public class Task3 {
 
         return kid;
     }
+    
+    static String RemoveInteger (String S) {
+        String NoLess = "";
+        
+        for (int i = 0; i < S.length(); i++)
+        {
+            if ( !( (S.charAt(i) >= '0') && (S.charAt(i) <= '9') ) )
+            {
+                NoLess = NoLess + S.charAt(i);
+            }
+        }
+        
+        return NoLess;
+    }
+    
+    static String StringEncryption (String S) {
+        String Encrypt = "";
+        int NLength = (int) (S.length() - (S.length() * 0.7));
+        
+        int min = 65;
+        int max = 90;
+        
+        for (int i = 0; i < NLength; i++)
+        {
+            int RandomInt = (int)Math.floor(Math.random()*(max-min+1)+min);
+            Encrypt = Encrypt + (char) RandomInt;
+        }
+        
+        return Encrypt;
+    }
 
     public static void main(String[] args) {
-        String S = "a     b";
+        String S = JOptionPane.showInputDialog(null, "Please enter the String for processing:");
 
-        System.out.print(RidMultipleBlank(S));
+        JOptionPane.showMessageDialog(null, "Without extra spaces: " + RidMultipleBlank(S) + "\n"
+                                          + "Without Integers: " + RemoveInteger(S) + "\n"
+                                          + "Encrypted: " + StringEncryption(S));
     }
 }
