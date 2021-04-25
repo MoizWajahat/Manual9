@@ -52,7 +52,7 @@ public class Task1 {
         {
             if ( (S.charAt(i) == '!') || (S.charAt(i) == '\"') || (S.charAt(i) == '\'') )
             {
-                Num++;
+                Num = Num + 1;
             }
             else if ( (S.charAt(i) == '(') || (S.charAt(i) == ')') || (S.charAt(i) == ',') )
             {
