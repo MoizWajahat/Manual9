@@ -64,7 +64,7 @@ class MyString {
         return NoPunc;
     }
     
-    static String RetainLettersNumbers (String S) {
+    static String RemoveSpaces (String S) {
         String refine = "";
         
         for (int i = 0; i < S.length(); i++)
@@ -84,5 +84,21 @@ class MyString {
         }
         
         return refine;
+    }
+    
+    static String StringPadding (String S, int size) {
+        String padded = "";
+        int pads = size - S.length();
+        
+        for (int i = 0; i < pads; i++)
+        {
+            padded = padded + "-";
+        }
+        for (int i = 0; i < S.length(); i++)
+        {
+            padded = padded + S.charAt(i);
+        }
+        
+        return padded;
     }
 }
