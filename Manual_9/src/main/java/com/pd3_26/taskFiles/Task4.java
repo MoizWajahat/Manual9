@@ -16,6 +16,13 @@ public class Task4 {
 }
 
 class MyString {
+    
+    /**
+     * 
+     * @param S This will be an inputted String.
+     * @return This will return only the integers from the String.
+     */
+    
     static String RetainIntegers (String S) {
         String IntOnly = "";
         
@@ -29,6 +36,12 @@ class MyString {
         
         return IntOnly;
     }
+    
+    /**
+     * 
+     * @param S This will be an inputted String.
+     * @return This will remove all punctuation marks from the String.
+     */
     
     static String RemovePuncs (String S) {
         String NoPunc = "";
@@ -64,6 +77,12 @@ class MyString {
         return NoPunc;
     }
     
+    /**
+     * 
+     * @param S This will be an inputted String.
+     * @return This will remove all spaces from the String.
+     */
+    
     static String RemoveSpaces (String S) {
         String refine = "";
         
@@ -85,6 +104,13 @@ class MyString {
         
         return refine;
     }
+    
+    /**
+     * 
+     * @param S This will be an inputted String.
+     * @param size This will be the required size of the String (must be less than S.length().
+     * @return This will return a String of the required size.
+     */
     
     static String StringPadding (String S, int size) {
         String padded = "";
