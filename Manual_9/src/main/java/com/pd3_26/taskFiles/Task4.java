@@ -63,4 +63,26 @@ class MyString {
         
         return NoPunc;
     }
+    
+    static String RetainLettersNumbers (String S) {
+        String refine = "";
+        
+        for (int i = 0; i < S.length(); i++)
+        {
+            if ( (S.charAt(i) >= 'A') && (S.charAt(i) <= 'Z') )
+            {
+                refine = refine + S.charAt(i);
+            }
+            else if ( (S.charAt(i) >= 'a') && (S.charAt(i) <= 'z') )
+            {
+                refine = refine + S.charAt(i);
+            }
+            else if ( (S.charAt(i) >= '0') && (S.charAt(i) <= '9') )
+            {
+                refine = refine + S.charAt(i);
+            }
+        }
+        
+        return refine;
+    }
 }
