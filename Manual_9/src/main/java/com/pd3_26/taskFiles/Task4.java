@@ -127,4 +127,22 @@ class MyString {
         
         return padded;
     }
+    
+    static String TakeVowels (String S) {
+        String V = "";
+        
+        for (int i = 0; i < S.length(); i++)
+        {
+            if ( (S.charAt(i) == 'A') || (S.charAt(i) == 'E') || (S.charAt(i) == 'I') || (S.charAt(i) == 'O') || (S.charAt(i) == 'U'))
+            {
+                V = V + S.charAt(i);
+            }
+            else if ( (S.charAt(i) == 'a') || (S.charAt(i) == 'e') || (S.charAt(i) == 'i') || (S.charAt(i) == 'o') || (S.charAt(i) == 'u'))
+            {
+                V = V + S.charAt(i);
+            }
+        }
+        
+        return V;
+    }
 }
