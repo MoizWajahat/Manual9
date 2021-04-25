@@ -18,11 +18,16 @@ public class Task3 {
 
         for (int i = 0; i < S.length(); i++) {
 
-            kid = kid + S.charAt(i);
-
             if (S.charAt(i) == ' ') {
-                
+                kid = kid + ' ';
+
+                while (S.charAt(i) == ' ') {
+                    i++;
+
+                }
             }
+
+            kid = kid + S.charAt(i);
 
         }
 
